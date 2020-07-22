@@ -7,7 +7,8 @@ let line6 = [0,0,1,1,0,0,0]
 
 
 
-function control(line,number){
+function input_for_user(line,number){
+	/*puts a circle in the selected cell*/
 	if (line[number] === 0){
 		line[number] = 1
 		return line
@@ -19,13 +20,15 @@ function control(line,number){
 
 number = 1
 
-if (!(control(line6,number))){
-	if (!(control(line5,number))){
-		if (!(control(line4,number))){
-			if (!(control(line3,number))){
-				if (!(control(line2,number))){
-					if (!(control(line1,number))){
-						print("ERROR")
+
+/*Control if possible put circle in the column predefinite*/
+if (!(input_for_user(line6,number))){
+    if (!(input_for_user(line5,number))){
+		if (!(input_for_user(line4,number))){
+			if (!(input_for_user(line3,number))){
+				if (!(input_for_user(line2,number))){
+					if (!(input_for_user(line1,number))){
+                        print("TOO MUCH")
 					}
 				}
 			}
