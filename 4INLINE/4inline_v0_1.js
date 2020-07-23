@@ -15,12 +15,12 @@ console.log("")
 console.log("")
 
 function input_for_user(line,number){
-	/*puts a circle in the selected cell*/
+    /*puts a circle in the selected cell*/
     if (line[number] === 0){
-    	line[number] = 1
-    	return line
+        line[number] = 1
+        return line
     } else {
-    	return false
+        return false
     }
 
 }
@@ -28,13 +28,13 @@ function input_for_user(line,number){
 
 
 function control_h(line){
-	/*control if 4 circle are in line(horizontal)*/
+    /*control if 4 circle are in line(horizontal)*/
     for (let сell in line){
     if (line[сell]===1 && line[++сell]===1 && line[++сell]===1 && line[++сell]===1 ){
-    	return true
-    	} else{
-    		continue
-    	}
+        return true
+        } else{
+            continue
+        }
     }
 }
 
@@ -51,20 +51,20 @@ while (cycle<10){
                     if (!(input_for_user(line2,number))){
                         if (!(input_for_user(line1,number))){
                             print("TOO MUCH")
-						} else{
+                        } else{
                             console.log("---ERROR in control if possible put circle--- ")
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/*Control in all table if 4 coins are in line*/
-	if (control_h(line1)===true || control_h(line2)===true || control_h(line3)===true || control_h(line4)===true || control_h(line5)===true || control_h(line6)===true){
-	  console.log("YOU WIN")
-	  cycle=20
-	}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /*Control in all table if 4 coins are in line*/ 
+    if (control_h(line1)===true || control_h(line2)===true || control_h(line3)===true || control_h(line4)===true || control_h(line5)===true || control_h(line6)===true){
+        console.log("YOU WIN")
+        cycle=20
+    }
 
 
 
@@ -78,4 +78,3 @@ while (cycle<10){
     console.log("")
     cycle++
 }
-/*Problem with tabs*/
