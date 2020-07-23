@@ -78,3 +78,4 @@ while (cycle<10){
 	console.log("")
 	cycle++
 }
+/*Problem with tabs*/
