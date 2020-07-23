@@ -16,12 +16,12 @@ console.log("")
 
 function input_for_user(line,number){
 	/*puts a circle in the selected cell*/
-	if (line[number] === 0){
-		line[number] = 1
-		return line
-	} else {
-		return false
-	}
+    if (line[number] === 0){
+    	line[number] = 1
+    	return line
+    } else {
+    	return false
+    }
 
 }
 
@@ -29,30 +29,30 @@ function input_for_user(line,number){
 
 function control_h(line){
 	/*control if 4 circle are in line(horizontal)*/
-	for (let сell in line){
-	if (line[сell]===1 && line[++сell]===1 && line[++сell]===1 && line[++сell]===1 ){
-      return true
-		} else{
-			continue
-		}
-	}
+    for (let сell in line){
+    if (line[сell]===1 && line[++сell]===1 && line[++сell]===1 && line[++сell]===1 ){
+    	return true
+    	} else{
+    		continue
+    	}
+    }
 }
 
 let cycle = 0
 while (cycle<10){	
-	let number = prompt("Column № ? ", ""); 
+    let number = prompt("Column № ? ", ""); 
 
 
-	/*Control if possible put circle in the column predefinite*/
-	if (!(input_for_user(line6,number))){
-	    if (!(input_for_user(line5,number))){
-			if (!(input_for_user(line4,number))){
-				if (!(input_for_user(line3,number))){
-					if (!(input_for_user(line2,number))){
-						if (!(input_for_user(line1,number))){
-	                        print("TOO MUCH")
+    /*Control if possible put circle in the column predefinite*/
+    if (!(input_for_user(line6,number))){
+        if (!(input_for_user(line5,number))){
+            if (!(input_for_user(line4,number))){
+                if (!(input_for_user(line3,number))){
+                    if (!(input_for_user(line2,number))){
+                        if (!(input_for_user(line1,number))){
+                            print("TOO MUCH")
 						} else{
-							console.log("---ERROR in control if possible put circle--- ")
+                            console.log("---ERROR in control if possible put circle--- ")
 						}
 					}
 				}
@@ -68,14 +68,14 @@ while (cycle<10){
 
 
 
-	console.log(line1)
-	console.log(line2)
-	console.log(line3)
-	console.log(line4)
-	console.log(line5)
-	console.log(line6)
-	console.log("")
-	console.log("")
-	cycle++
+    console.log(line1)
+    console.log(line2)
+    console.log(line3)
+    console.log(line4)
+    console.log(line5)
+    console.log(line6)
+    console.log("")
+    console.log("")
+    cycle++
 }
 /*Problem with tabs*/
