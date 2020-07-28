@@ -40,7 +40,7 @@ function control_h(line){
 
 let cycle = 0
 while (cycle<10){	
-    let number = prompt("Column № ? ", ""); 
+    let number = 1
 
 
     /*Control if possible put circle in the column predefinite*/
@@ -77,4 +77,7 @@ while (cycle<10){
     console.log("")
     console.log("")
     cycle++
+}
+function input(){
+    document.getElementById("coin1").append("123")
 }
