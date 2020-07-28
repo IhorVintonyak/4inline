@@ -50,7 +50,7 @@ while (cycle<10){
                 if (!(input_for_user(line3,number))){
                     if (!(input_for_user(line2,number))){
                         if (!(input_for_user(line1,number))){
-                            print("TOO MUCH")
+                            console.log("TOO MUCH")
                         } else{
                             console.log("---ERROR in control if possible put circle--- ")
                         }
