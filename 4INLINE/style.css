@@ -34,6 +34,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	justify-content: space-between;
 	padding-left:17px;
 	padding-top: 25px;
+	padding-right: 15px;
 }
 
 .buttons{
@@ -47,4 +48,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .button{
 	width: 13%;
 	box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+}
+.circle{
+	width: 115px;
+	height:115px;
+	background-color: green;
+	border-radius: 50%;
+}
+.circle_red{
+	background:url('img/coins_red.png');
+	background-size: cover; 
 }

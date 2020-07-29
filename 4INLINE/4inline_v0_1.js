@@ -78,6 +78,20 @@ while (cycle<10){
     console.log("")
     cycle++
 }
-function input(){
-    document.getElementById("coin1").append("123")
+
+document.addEventListener("DOMContentLoaded", () => {
+    let circle=document.getElementById("first_line_1coin")
+    circle.classList.add("circle_red")
+  });
+
+function user_button1(){
+    let circle=document.getElementById("sixth_line_1coin")
+    circle.classList.add("circle_red")
+    circle.classList.remove('cicle')
+    console.dir(circle)
+    if (console.log(circle.value)=="circle circle_red"){
+        console.log("OK")
+    }else{
+        console.log("NOTOK")
+    }
 }
