@@ -56,6 +56,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	border-radius: 50%;
 }
 .circle_red{
+	width: 115px;
+	height:115px;
 	background:url('img/coins_red.png');
 	background-size: cover; 
 }

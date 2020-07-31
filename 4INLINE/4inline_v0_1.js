@@ -84,14 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     circle.classList.add("circle_red")
   });
 
-function user_button1(){
+function user_button(el){
     let circle=document.getElementById("sixth_line_1coin")
     circle.classList.add("circle_red")
     circle.classList.remove('cicle')
-    console.dir(circle)
-    if (console.log(circle.value)=="circle circle_red"){
+    if (circle.getAttribute("value")==="OH"){
         console.log("OK")
     }else{
-        console.log("NOTOK")
+        console.log("error in function user_button1")
     }
 }
