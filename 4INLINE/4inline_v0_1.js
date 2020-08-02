@@ -78,7 +78,7 @@ while (cycle<10){
     console.log("")
     cycle++
 }
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     let circle=document.getElementById("first_line_1coin")
     circle.classList.add("circle_red")
@@ -94,3 +94,4 @@ function user_button(el){
         console.log("error in function user_button1")
     }
 }
+*/
