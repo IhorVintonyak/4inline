@@ -271,4 +271,14 @@ function user_button(el){
     }
 
 }
-
+/*
+function control_table(){
+    let list=[2]
+    let element=document.getElementById("1_line_1coin")
+    console.log(element)
+    let value=element.getAttribute("value")
+    list[0]=circle
+    console.log(list)
+}
+console.log(control_table())
+*/
