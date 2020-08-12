@@ -74,3 +74,14 @@ body{
 	background:url('img/coins_red.png');
 	background-size: cover; 
 }
+.circle_blue{
+	width: 115px;
+	height:115px;
+	background:url('img/coins_blue.png');
+	background-size: cover;	
+}
+.text{
+	font-size: 70px;
+	text-align: center;
+	color: green;
+}
