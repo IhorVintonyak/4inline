@@ -21,6 +21,7 @@ function control_v(line1,line2,line3,line4,line5,line6){
 }
 
 function control_d(line1,line2,line3,line4){
+    /*control if 4 circle are in line(diagonally)*/
     for (let cicle=0;cicle<=7 ;cicle++){
         if (line1[cicle]===1 && line2[cicle+1]===1 && line3[cicle+2]===1  && line4[cicle+3]===1 || line4[cicle]===1 && line3[cicle+1]===1 && line2[cicle+2]===1  && line1[cicle+3]===1){
             return true
@@ -33,7 +34,7 @@ function control_d(line1,line2,line3,line4){
 
 /*CLICK BUTTON*/
 let repeats=1
-function user_button(el){
+function user_button(element){
     column=el.getAttribute("value")
     
     if (column==1){
@@ -711,28 +712,31 @@ function user_button(el){
     console.log(line5)
     console.log(line6)
     
+    var red_won="RED PLAYER WON"
+    var blue_won="BLUE PLAYER WON"
+
 
     if (control_h(line1)===true || control_h(line2)===true || control_h(line3)===true || control_h(line4)===true || control_h(line5)===true || control_h(line6)===true){
         if(repeats%2===1){
-            document.getElementById("final_text").textContent="RED PLAYER WON"
+            document.getElementById("final_text").textContent=red_won
         }else{
-            document.getElementById("final_text").textContent="BLUE PLAYER WON"
+            document.getElementById("final_text").textContent=blue_won
         }
     }
 
     if (control_v(line1,line2,line3,line4,line5,line6)===true){
         if(repeats%2===1){
-            document.getElementById("final_text").textContent="RED PLAYER WON"
+            document.getElementById("final_text").textContent=red_won
         }else{
-            document.getElementById("final_text").textContent="BLUE PLAYER WON"
+            document.getElementById("final_text").textContent=blue_won
         }
 
     }
     if(control_d(line1,line2,line3,line4)===true || control_d(line2,line3,line4,line5)===true || control_d(line3,line4,line5,line6)){
       if(repeats%2===1){
-            document.getElementById("final_text").textContent="RED PLAYER WON"
+            document.getElementById("final_text").textContent=red_won
         }else{
-            document.getElementById("final_text").textContent="BLUE PLAYER WON"
+            document.getElementById("final_text").textContent=blue_won
         }  
     }
     console.log(repeats)
