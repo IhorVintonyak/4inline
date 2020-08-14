@@ -16,16 +16,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 body{
 	padding-top: 20px;
+	background-color: #62EA7F;
 }
 .table{
-	background: url('img/table.png') 0 0 no-repeat scroll;
+	padding:20px 10px;
+	background:darkgreen;
 	background-repeat: no-repeat;
 	width: 45%;
-	height: 80%;
+	height: auto;
 	margin:0 auto;
 	margin-top: 10px;
-	min-width: 750px;
-
+	min-width: 700px;
 }
 
 .table_line{
@@ -43,7 +44,7 @@ body{
 	height: 100px;
 	margin:0 auto;
 	padding: 0 15px;
-	min-width: 750px;
+	min-width: 700px;
 }
 .button{
 	width: 13%;
@@ -60,27 +61,27 @@ body{
 
 }
 .circle{
-	width: 100px;
-	height:100px;
+	width: 90px;
+	height:90px;
 	background-color: green;
 	border-radius: 50%;
 }
 .circle_red{
-	width: 100px;
-	height:100px;
+	width: 90px;
+	height:90px;
 	background:url('img/coins_red.png');
 	background-size: cover; 
 }
 .circle_blue{
-	width: 100px;
-	height:100px;
+	width: 90px;
+	height:90px;
 	background:url('img/coins_blue.png');
 	background-size: cover;	
 }
 .text{
 	font-size: 70px;
 	text-align: center;
-	color: green;
+	color: #094F18;
 }
 .FAQ{
 	font-size: 50px;
