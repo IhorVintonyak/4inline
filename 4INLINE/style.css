@@ -94,3 +94,20 @@ body{
 .FAQ:hover{
 	color: #56A63D;
 }
+@media (max-height: 890px){
+	.table{
+	height: 510px;
+	}
+	.circle{
+		width: 55px;
+		height:55px;
+	}
+	.circle_red{
+		width: 55px;
+		height:55px;
+	}
+	.circle_blue{
+		width: 55px;
+		height:55px;
+	}
+}
