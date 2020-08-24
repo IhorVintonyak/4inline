@@ -369,6 +369,8 @@ function clickOnButton(input){
         }else{
             document.getElementById("final_text").textContent=blueWon
         }
+        var element = document.getElementById("buttons");
+        element.parentNode.removeChild(element);
     }
 
     if (checkVertically(line1,line2,line3,line4,line5,line6)===true){
@@ -377,14 +379,17 @@ function clickOnButton(input){
         }else{
             document.getElementById("final_text").textContent=blueWon
         }
-
+        var element = document.getElementById("buttons");
+        element.parentNode.removeChild(element);
     }
     if(checkDiagonally(line1,line2,line3,line4)===true || checkDiagonally(line2,line3,line4,line5)===true || checkDiagonally(line3,line4,line5,line6)){
-      if(cycle%2===1){
+        if(cycle%2===1){
             document.getElementById("final_text").textContent=redWon
         }else{
             document.getElementById("final_text").textContent=blueWon
-        }  
+        var element = document.getElementById("buttons");
+        element.parentNode.removeChild(element);
+        }
     }
     console.log(cycle)
     cycle++
