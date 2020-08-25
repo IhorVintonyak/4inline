@@ -1,3 +1,42 @@
+function buttonOff(){
+    /*disable all input buttons */
+    document.getElementById("button1").disabled=true;
+    document.getElementById("button2").disabled=true;
+    document.getElementById("button3").disabled=true;
+    document.getElementById("button4").disabled=true;
+    document.getElementById("button5").disabled=true;
+    document.getElementById("button6").disabled=true;
+    document.getElementById("button7").disabled=true;
+}
+function buttonOn(){
+    /*active all input buttons */
+    document.getElementById("button1").disabled=false;
+    document.getElementById("button2").disabled=false;
+    document.getElementById("button3").disabled=false;
+    document.getElementById("button4").disabled=false;
+    document.getElementById("button5").disabled=false;
+    document.getElementById("button6").disabled=false;
+    document.getElementById("button7").disabled=false;
+}
+
+function reset(){
+    /*returns the original value of the variable*/
+    let list = document.getElementsByClassName("circle")
+    for (let cycle in list){
+        if (cycle<42){
+            let element = list[cycle]
+            let value = element.getAttribute("value")    
+            if (value==="red" || value==="blue"){
+                list[cycle].setAttribute("value","green")
+                list[cycle].classList.remove("circle_red")
+                list[cycle].classList.remove("circle_blue")
+            buttonOn()
+            document.getElementById("final_text").textContent=""
+            }
+        }
+    }
+}
+
 function checkHorizontally(line){
     /*control if 4 circle are in line(horizontal)*/
     for (let сell in line){
@@ -12,10 +51,10 @@ function checkHorizontally(line){
 
 function checkVertically(line1,line2,line3,line4,line5,line6){
     /*control if 4 circle are in line(vertically)*/
-    for (let cicle=0;cicle<=7 ;cicle++){
-        if (line1[cicle]===1 && line2[cicle]===1 && line3[cicle]===1 && line4[cicle]===1 || line2[cicle]===1 && line3[cicle]===1 && line4[cicle]===1 && line5[cicle]===1 || line3[cicle]===1 && line4[cicle]===1 && line5[cicle]===1 && line6[cicle]===1){
+    for (let cycle=0;cycle<=7 ;cycle++){
+        if (line1[cycle]===1 && line2[cycle]===1 && line3[cycle]===1 && line4[cycle]===1 || line2[cycle]===1 && line3[cycle]===1 && line4[cycle]===1 && line5[cycle]===1 || line3[cycle]===1 && line4[cycle]===1 && line5[cycle]===1 && line6[cycle]===1){
             return true
-        }else if(line1[cicle]===2 && line2[cicle]===2 && line3[cicle]===2 && line4[cicle]===2 || line2[cicle]===2 && line3[cicle]===2 && line4[cicle]===2 && line5[cicle]===2 || line3[cicle]===2 && line4[cicle]===2 && line5[cicle]===2 && line6[cicle]===2) {
+        }else if(line1[cycle]===2 && line2[cycle]===2 && line3[cycle]===2 && line4[cycle]===2 || line2[cycle]===2 && line3[cycle]===2 && line4[cycle]===2 && line5[cycle]===2 || line3[cycle]===2 && line4[cycle]===2 && line5[cycle]===2 && line6[cycle]===2) {
             return true
         }
     }
@@ -23,11 +62,11 @@ function checkVertically(line1,line2,line3,line4,line5,line6){
 
 function checkDiagonally(line1,line2,line3,line4){
     /*control if 4 circle are in line(diagonally)*/
-    for (let cicle=0;cicle<=7 ;cicle++){
-        if (line1[cicle]===1 && line2[cicle+1]===1 && line3[cicle+2]===1  && line4[cicle+3]===1 || line4[cicle]===1 && line3[cicle+1]===1 && line2[cicle+2]===1  && line1[cicle+3]===1){
+    for (let cycle=0;cycle<=7 ;cycle++){
+        if (line1[cycle]===1 && line2[cycle+1]===1 && line3[cycle+2]===1  && line4[cycle+3]===1 || line4[cycle]===1 && line3[cycle+1]===1 && line2[cycle+2]===1  && line1[cycle+3]===1){
             return true
         
-        }else if(line1[cicle]===2 && line2[cicle+1]===2 && line3[cicle+2]===2  && line4[cicle+3]===2 || line4[cicle]===2 && line3[cicle+1]===2 && line2[cicle+2]===2  && line1[cicle+3]===2){
+        }else if(line1[cycle]===2 && line2[cycle+1]===2 && line3[cycle+2]===2  && line4[cycle+3]===2 || line4[cycle]===2 && line3[cycle+1]===2 && line2[cycle+2]===2  && line1[cycle+3]===2){
             return true
         }
     }
@@ -369,8 +408,7 @@ function clickOnButton(input){
         }else{
             document.getElementById("final_text").textContent=blueWon
         }
-        var element = document.getElementById("buttons");
-        element.parentNode.removeChild(element);
+        buttonOff()
     }
 
     if (checkVertically(line1,line2,line3,line4,line5,line6)===true){
@@ -379,17 +417,15 @@ function clickOnButton(input){
         }else{
             document.getElementById("final_text").textContent=blueWon
         }
-        var element = document.getElementById("buttons");
-        element.parentNode.removeChild(element);
+        buttonOff()
     }
     if(checkDiagonally(line1,line2,line3,line4)===true || checkDiagonally(line2,line3,line4,line5)===true || checkDiagonally(line3,line4,line5,line6)){
         if(cycle%2===1){
             document.getElementById("final_text").textContent=redWon
         }else{
             document.getElementById("final_text").textContent=blueWon
-        var element = document.getElementById("buttons");
-        element.parentNode.removeChild(element);
         }
+        buttonOff()
     }
     console.log(cycle)
     cycle++

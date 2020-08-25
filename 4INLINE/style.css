@@ -18,18 +18,21 @@ body{
 	padding-top: 20px;
 	background-color: #62EA7F;
 }
+.middle{
+	width: 700px;
+	margin: 0 auto;
+}
 .table{
 	padding:20px 10px;
 	background:darkgreen;
 	background-repeat: no-repeat;
-	width: 45%;
-	height: auto;
 	margin:0 auto;
 	margin-top: 10px;
-	min-width: 700px;
 	border-style:solid;
 	border-color:red;
 	border-width: 6px;
+	height: 700px;
+	width: 100%;
 }
 
 .table_line{
@@ -43,11 +46,9 @@ body{
 .buttons{
 	display: flex;
 	justify-content: space-between;
-	width: 45%;
 	height: 100px;
 	margin:0 auto;
 	padding: 0 15px;
-	min-width: 700px;
 }
 .button{
 	width: 13%;
@@ -56,7 +57,7 @@ body{
 	color: #4DEF15;
 	text-transform: uppercase;
 	font-size: 20px;
-
+	line-height: 1.5;
 }
 .button:hover{
 	width: 13%;
@@ -64,20 +65,20 @@ body{
 
 }
 .circle{
-	width: 90px;
-	height:90px;
+	width: 80px;
+	height:80px;
 	background-color: green;
 	border-radius: 50%;
 }
 .circle_red{
-	width: 90px;
-	height:90px;
+	width: 80px;
+	height:80px;
 	background:url('img/coins_red.png');
 	background-size: cover; 
 }
 .circle_blue{
-	width: 90px;
-	height:90px;
+	width: 80px;
+	height:80px;
 	background:url('img/coins_blue.png');
 	background-size: cover;	
 }
@@ -86,31 +87,106 @@ body{
 	text-align: center;
 	color: #094F18;
 }
-.FAQ{
-	font-size: 50px;
-	color: #4DEF15;
+.additionalButton{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+.FAQButton{
+	text-align: center;
+	margin: 0 auto;
 	background-color: darkgreen;
-	width: 130px;
+	width: 49%;
 	box-shadow: 1px 3px 1px rgba(0,0,0,0.5);
 	padding:10px;
+}
+.FAQ{
+	width: 100%;
+	color: #4DEF15;
+	font-size: 50px;
 }
 .FAQ:hover{
 	color: #56A63D;
 }
-@media (max-height: 890px){
+.resetButton{
+	margin: 0 auto;
+	background-color: darkgreen;
+	width: 49%;
+	box-shadow: 1px 3px 1px rgba(0,0,0,0.5);
+	padding:10px;
+}
+.reset{
+	width: 100%;
+	color: #4DEF15;
+	font-size: 50px;
+	background-color: darkgreen;
+}
+@media (max-height: 900px){
+	.text{
+		font-size: 48px;
+	}
+	.middle{
+		height: 600px;
+	}
 	.table{
-	height: 510px;
+		padding-top: 0px;
+		height: 550px;
 	}
 	.circle{
-		width: 55px;
-		height:55px;
+		width: 60px;
+		height:60px;
 	}
 	.circle_red{
-		width: 55px;
-		height:55px;
+		width: 60px;
+		height:60px;
 	}
 	.circle_blue{
-		width: 55px;
-		height:55px;
+		width: 60px;
+		height:60px;
+	}
+	.button{
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
+@media(max-height: 715px){
+	.text{
+		font-size: 40px;
+	}
+	.middle{
+		height: 500px;
+		width: 550px;
+	}
+	.table{
+		padding-top: 0px;
+		height: 450px;
+	}
+	.circle{
+		width: 44px;
+		height:44px;
+	}
+	.circle_red{
+		width: 44px;
+		height:44px;
+	}
+	.circle_blue{
+		width: 44px;
+		height:44px;
+	}
+	.button{
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	.FAQButton{
+		height: 50px;
+	}
+	.FAQ{
+		font-size: 30px;
+	}
+	.resetButton{
+		height: 50px;
+	}
+	.reset{
+		font-size: 30px;
 	}
 }

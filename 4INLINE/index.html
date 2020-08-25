@@ -7,17 +7,18 @@
         <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-	<script src="4inline_v0_2.js">
+	<script src="4inline_v1_0.js">
 	</script>
+    <div class="middle">
         <h1 id="final_text" class="text"></h1>
-	   <div class="buttons" id="buttons">
-            <button class="button" type="button" value="1" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="2" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="3" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="4" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="5" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="6" onclick="clickOnButton(this)">Choose column</button>
-            <button class="button" type="button" value="7" onclick="clickOnButton(this)">Choose column</button>
+        <div class="buttons" id="buttons">
+            <button id="button1" class="button" type="button" value="1" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button2" class="button" type="button" value="2" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button3" class="button" type="button" value="3" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button4" class="button" type="button" value="4" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button5" class="button" type="button" value="5" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button6" class="button" type="button" value="6" onclick="clickOnButton(this)">Choose column</button>
+            <button id="button7" class="button" type="button" value="7" onclick="clickOnButton(this)">Choose column</button>
         </div>
         
         <div class="table" id="table">
@@ -125,9 +126,11 @@
                 <div class="circle" id="6Line7Cell" value="green">
                 </div>
             </div>
-
-
         </div>  <!--- /table --->
-        <a class="FAQ" href="FAQ.html" target="blank">FAQ</a>
+        <div class="additionalButton">
+            <div class="FAQButton"><a class="FAQ" href="FAQ.html" target="blank">FAQ</a></div>
+            <div class="resetButton"><button class="reset" onclick="reset()">NEW GAME</button></div>
+        </div>
+    </div>
 	</body>
 </html>
