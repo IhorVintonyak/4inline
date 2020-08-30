@@ -1,22 +1,16 @@
 function buttonOff(){
     /*disable all input buttons */
-    document.getElementById("button1").disabled=true;
-    document.getElementById("button2").disabled=true;
-    document.getElementById("button3").disabled=true;
-    document.getElementById("button4").disabled=true;
-    document.getElementById("button5").disabled=true;
-    document.getElementById("button6").disabled=true;
-    document.getElementById("button7").disabled=true;
+    let buttonList = document.getElementsByClassName("button")
+	for (let element in buttonList){
+		buttonList[element].disabled = true
+	}
 }
 function buttonOn(){
     /*active all input buttons */
-    document.getElementById("button1").disabled=false;
-    document.getElementById("button2").disabled=false;
-    document.getElementById("button3").disabled=false;
-    document.getElementById("button4").disabled=false;
-    document.getElementById("button5").disabled=false;
-    document.getElementById("button6").disabled=false;
-    document.getElementById("button7").disabled=false;
+    let buttonList = document.getElementsByClassName("button")
+	for (let element in buttonList){
+		buttonList[element].disabled = false
+	}
 }
 
 function reset(){
@@ -25,7 +19,7 @@ function reset(){
     for (let cycle in list){
         if (cycle<42){
             let element = list[cycle]
-            let value = element.getAttribute("value")    
+            let value = element.getAttribute("value")
             if (value==="red" || value==="blue"){
                 list[cycle].setAttribute("value","green")
                 list[cycle].classList.remove("circle_red")
@@ -252,137 +246,94 @@ function clickOnButton(input){
     }
 
 
-
-
-    let element2_1=0
-    let element2_2=0
-    let element2_3=0
-    let element2_4=0
-    let element2_5=0
-    let element2_6=0
-    let element2_7=0
-
-    let element3_1=0
-    let element3_2=0
-    let element3_3=0
-    let element3_4=0
-    let element3_5=0
-    let element3_6=0
-    let element3_7=0
-
-    let element4_1=0
-    let element4_2=0
-    let element4_3=0
-    let element4_4=0
-    let element4_5=0
-    let element4_6=0
-    let element4_7=0
-
-    let element5_1=0
-    let element5_2=0
-    let element5_3=0
-    let element5_4=0
-    let element5_5=0
-    let element5_6=0
-    let element5_7=0
-
-    let element6_1=0
-    let element6_2=0
-    let element6_3=0
-    let element6_4=0
-    let element6_5=0
-    let element6_6=0
-    let element6_7=0
-
-
-    element1_1=document.getElementById("1Line1Cell").getAttribute("value")
+    let element1_1=document.getElementById("1Line1Cell").getAttribute("value")
     element1_1=numberFromValue(element1_1)
-    element1_2=document.getElementById("1Line2Cell").getAttribute("value")
+    let element1_2=document.getElementById("1Line2Cell").getAttribute("value")
     element1_2=numberFromValue(element1_2)
-    element1_3=document.getElementById("1Line3Cell").getAttribute("value")
+    let element1_3=document.getElementById("1Line3Cell").getAttribute("value")
     element1_3=numberFromValue(element1_3)
-    element1_4=document.getElementById("1Line4Cell").getAttribute("value")
+    let element1_4=document.getElementById("1Line4Cell").getAttribute("value")
     element1_4=numberFromValue(element1_4)
-    element1_5=document.getElementById("1Line5Cell").getAttribute("value")
+    let element1_5=document.getElementById("1Line5Cell").getAttribute("value")
     element1_5=numberFromValue(element1_5)
-    element1_6=document.getElementById("1Line6Cell").getAttribute("value")
+    let element1_6=document.getElementById("1Line6Cell").getAttribute("value")
     element1_6=numberFromValue(element1_6)
-    element1_7=document.getElementById("1Line7Cell").getAttribute("value")
+    let element1_7=document.getElementById("1Line7Cell").getAttribute("value")
     element1_7=numberFromValue(element1_7)
 
-    element2_1=document.getElementById("2Line1Cell").getAttribute("value")
+    let element2_1=document.getElementById("2Line1Cell").getAttribute("value")
     element2_1=numberFromValue(element2_1)
-    element2_2=document.getElementById("2Line2Cell").getAttribute("value")
+    let element2_2=document.getElementById("2Line2Cell").getAttribute("value")
     element2_2=numberFromValue(element2_2)
-    element2_3=document.getElementById("2Line3Cell").getAttribute("value")
+    let element2_3=document.getElementById("2Line3Cell").getAttribute("value")
     element2_3=numberFromValue(element2_3)
-    element2_4=document.getElementById("2Line4Cell").getAttribute("value")
+    let element2_4=document.getElementById("2Line4Cell").getAttribute("value")
     element2_4=numberFromValue(element2_4)
-    element2_5=document.getElementById("2Line5Cell").getAttribute("value")
+    let element2_5=document.getElementById("2Line5Cell").getAttribute("value")
     element2_5=numberFromValue(element2_5)
-    element2_6=document.getElementById("2Line6Cell").getAttribute("value")
+    let element2_6=document.getElementById("2Line6Cell").getAttribute("value")
     element2_6=numberFromValue(element2_6)
-    element2_7=document.getElementById("2Line7Cell").getAttribute("value")
+    let element2_7=document.getElementById("2Line7Cell").getAttribute("value")
     element2_7=numberFromValue(element2_7)
 
-    element3_1=document.getElementById("3Line1Cell").getAttribute("value")
+    let element3_1=document.getElementById("3Line1Cell").getAttribute("value")
     element3_1=numberFromValue(element3_1)
-    element3_2=document.getElementById("3Line2Cell").getAttribute("value")
+    let element3_2=document.getElementById("3Line2Cell").getAttribute("value")
     element3_2=numberFromValue(element3_2)
-    element3_3=document.getElementById("3Line3Cell").getAttribute("value")
+    let element3_3=document.getElementById("3Line3Cell").getAttribute("value")
     element3_3=numberFromValue(element3_3)
-    element3_4=document.getElementById("3Line4Cell").getAttribute("value")
+    let element3_4=document.getElementById("3Line4Cell").getAttribute("value")
     element3_4=numberFromValue(element3_4)
-    element3_5=document.getElementById("3Line5Cell").getAttribute("value")
+    let element3_5=document.getElementById("3Line5Cell").getAttribute("value")
     element3_5=numberFromValue(element3_5)
-    element3_6=document.getElementById("3Line6Cell").getAttribute("value")
+    let element3_6=document.getElementById("3Line6Cell").getAttribute("value")
     element3_6=numberFromValue(element3_6)
-    element3_7=document.getElementById("3Line7Cell").getAttribute("value")
+    let element3_7=document.getElementById("3Line7Cell").getAttribute("value")
     element3_7=numberFromValue(element3_7)
 
-    element4_1=document.getElementById("4Line1Cell").getAttribute("value")
+    let element4_1=document.getElementById("4Line1Cell").getAttribute("value")
     element4_1=numberFromValue(element4_1)
-    element4_2=document.getElementById("4Line2Cell").getAttribute("value")
+    let element4_2=document.getElementById("4Line2Cell").getAttribute("value")
     element4_2=numberFromValue(element4_2)
-    element4_3=document.getElementById("4Line3Cell").getAttribute("value")
+    let element4_3=document.getElementById("4Line3Cell").getAttribute("value")
     element4_3=numberFromValue(element4_3)
-    element4_4=document.getElementById("4Line4Cell").getAttribute("value")
+    let element4_4=document.getElementById("4Line4Cell").getAttribute("value")
     element4_4=numberFromValue(element4_4)
-    element4_5=document.getElementById("4Line5Cell").getAttribute("value")
+    let element4_5=document.getElementById("4Line5Cell").getAttribute("value")
     element4_5=numberFromValue(element4_5)
-    element4_6=document.getElementById("4Line6Cell").getAttribute("value")
+    let element4_6=document.getElementById("4Line6Cell").getAttribute("value")
     element4_6=numberFromValue(element4_6)
-    element4_7=document.getElementById("4Line7Cell").getAttribute("value")
+    let element4_7=document.getElementById("4Line7Cell").getAttribute("value")
     element4_7=numberFromValue(element4_7)
 
-    element5_1=document.getElementById("5Line1Cell").getAttribute("value")
+    let element5_1=document.getElementById("5Line1Cell").getAttribute("value")
     element5_1=numberFromValue(element5_1)
-    element5_2=document.getElementById("5Line2Cell").getAttribute("value")
+    let element5_2=document.getElementById("5Line2Cell").getAttribute("value")
     element5_2=numberFromValue(element5_2)
-    element5_3=document.getElementById("5Line3Cell").getAttribute("value")
+    let element5_3=document.getElementById("5Line3Cell").getAttribute("value")
     element5_3=numberFromValue(element5_3)
-    element5_4=document.getElementById("5Line4Cell").getAttribute("value")
+    let element5_4=document.getElementById("5Line4Cell").getAttribute("value")
     element5_4=numberFromValue(element5_4)
-    element5_5=document.getElementById("5Line5Cell").getAttribute("value")
+    let element5_5=document.getElementById("5Line5Cell").getAttribute("value")
     element5_5=numberFromValue(element5_5)
-    element5_6=document.getElementById("5Line6Cell").getAttribute("value")
+    let element5_6=document.getElementById("5Line6Cell").getAttribute("value")
     element5_6=numberFromValue(element5_6)
-    element5_7=document.getElementById("5Line7Cell").getAttribute("value")
+    let element5_7=document.getElementById("5Line7Cell").getAttribute("value")
     element5_7=numberFromValue(element5_7)
 
-    element6_1=document.getElementById("6Line1Cell").getAttribute("value")
+    let element6_1=document.getElementById("6Line1Cell").getAttribute("value")
     element6_1=numberFromValue(element6_1)
-    element6_2=document.getElementById("6Line2Cell").getAttribute("value")
+    let element6_2=document.getElementById("6Line2Cell").getAttribute("value")
     element6_2=numberFromValue(element6_2)
-    element6_3=document.getElementById("6Line3Cell").getAttribute("value")
+    let element6_3=document.getElementById("6Line3Cell").getAttribute("value")
     element6_3=numberFromValue(element6_3)
-    element6_4=document.getElementById("6Line4Cell").getAttribute("value")
+    let element6_4=document.getElementById("6Line4Cell").getAttribute("value")
     element6_4=numberFromValue(element6_4)
-    element6_5=document.getElementById("6Line5Cell").getAttribute("value")
+    let element6_5=document.getElementById("6Line5Cell").getAttribute("value")
     element6_5=numberFromValue(element6_5)
-    element6_6=document.getElementById("6Line6Cell").getAttribute("value")
+    let element6_6=document.getElementById("6Line6Cell").getAttribute("value")
     element6_6=numberFromValue(element6_6)
-    element6_7=document.getElementById("6Line7Cell").getAttribute("value")
+    let element6_7=document.getElementById("6Line7Cell").getAttribute("value")
     element6_7=numberFromValue(element6_7)
 
     line1=[element1_1,element1_2,element1_3,element1_4,element1_5,element1_6,element1_7]
@@ -391,12 +342,6 @@ function clickOnButton(input){
     line4=[element4_1,element4_2,element4_3,element4_4,element4_5,element4_6,element4_7]
     line5=[element5_1,element5_2,element5_3,element5_4,element5_5,element5_6,element5_7]
     line6=[element6_1,element6_2,element6_3,element6_4,element6_5,element6_6,element6_7]
-    console.log(line1)
-    console.log(line2)
-    console.log(line3)
-    console.log(line4)
-    console.log(line5)
-    console.log(line6)
     
     var redWon="RED PLAYER WON"
     var blueWon="BLUE PLAYER WON"
@@ -427,6 +372,5 @@ function clickOnButton(input){
         }
         buttonOff()
     }
-    console.log(cycle)
     cycle++
 }
