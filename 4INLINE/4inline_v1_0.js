@@ -345,30 +345,42 @@ function clickOnButton(input){
     
     var redWon="RED PLAYER WON"
     var blueWon="BLUE PLAYER WON"
-
+    let finalText = document.getElementById("final_text")
 
     if (checkHorizontally(line1)===true || checkHorizontally(line2)===true || checkHorizontally(line3)===true || checkHorizontally(line4)===true || checkHorizontally(line5)===true || checkHorizontally(line6)===true){
         if(cycle%2===1){
-            document.getElementById("final_text").textContent=redWon
+            finalText.textContent=redWon
+            finalText.classList.add("text_red")
+            finalText.classList.remove("text_blue")
         }else{
-            document.getElementById("final_text").textContent=blueWon
+            finalText.textContent=blueWon
+            finalText.classList.add("text_blue")
+            finalText.classList.remove("text_red")
         }
         buttonOff()
     }
 
     if (checkVertically(line1,line2,line3,line4,line5,line6)===true){
         if(cycle%2===1){
-            document.getElementById("final_text").textContent=redWon
+            finalText.textContent=redWon
+            finalText.classList.add("text_red")
+            finalText.classList.remove("text_blue")
         }else{
-            document.getElementById("final_text").textContent=blueWon
+            finalText.textContent=blueWon
+            finalText.classList.add("text_blue")
+            finalText.classList.remove("text_red")
         }
         buttonOff()
     }
     if(checkDiagonally(line1,line2,line3,line4)===true || checkDiagonally(line2,line3,line4,line5)===true || checkDiagonally(line3,line4,line5,line6)){
         if(cycle%2===1){
-            document.getElementById("final_text").textContent=redWon
+            finalText.textContent=redWon
+            finalText.classList.add("text_red")
+            finalText.classList.remove("text_blue")
         }else{
-            document.getElementById("final_text").textContent=blueWon
+            finalText.textContent=blueWon
+            finalText.classList.add("text_blue")
+            finalText.classList.remove("text_red")
         }
         buttonOff()
     }

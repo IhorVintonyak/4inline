@@ -16,7 +16,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 body{
 	padding-top: 20px;
-	background-color: #62EA7F;
+	background-image: url(img/fon.png);
+	background-size: cover;
 }
 .middle{
 	width: 700px;
@@ -86,6 +87,12 @@ body{
 	font-size: 70px;
 	text-align: center;
 	color: #094F18;
+}
+.text_red{
+	color: #ff0000;
+}
+.text_blue{
+	color: #0084ff;
 }
 .additionalButton{
 	width: 100%;
