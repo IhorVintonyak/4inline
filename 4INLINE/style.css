@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 body{
 	padding-top: 20px;
-	background-image: url(img/fon.png);
+	background-color: #199be6;
 	background-size: cover;
 }
 .middle{
@@ -25,7 +25,8 @@ body{
 }
 .table{
 	padding:20px 10px;
-	background:darkgreen;
+	border-radius: 100px;
+	background-color: #33b4ff;
 	background-repeat: no-repeat;
 	margin:0 auto;
 	margin-top: 10px;
@@ -50,85 +51,118 @@ body{
 	height: 100px;
 	margin:0 auto;
 	padding: 0 15px;
+	width: 97%;
 }
 .button{
-	width: 13%;
+	width: 60px;
 	box-shadow: 1px 3px 1px rgba(0,0,0,0.5);
-	background-color: darkgreen;
-	color: #4DEF15;
+	border-radius: 20px;
+
+	background: #37a9eb;
+	box-shadow:  7px 7px 14px #2a80b3, 
+	             -7px -7px 14px #44d2ff;
+
+	color: #000;
 	text-transform: uppercase;
 	font-size: 20px;
 	line-height: 1.5;
 }
 .button:hover{
-	width: 13%;
-	color: #56A63D;
+	color: #007bc2;
 
 }
+.button:active{
+	box-shadow: none;
+}
+
 .circle{
 	width: 80px;
 	height:80px;
-	background-color: green;
-	border-radius: 50%;
+	border-radius: 150px;
+	background: #33b4ff;
+	box-shadow: inset 8px 8px 16px #237cb0, 
+	            inset -8px -8px 16px #43ecff;
 }
 .circle_red{
 	width: 80px;
 	height:80px;
-	background:url('img/coins_red.png');
-	background-size: cover; 
+	border-radius: 205px;
+	border-radius: 150px;
+	background: #d60004;
+	box-shadow: inset 8px 8px 16px #560002, 
+	            inset -8px -8px 16px #ff0006;
 }
 .circle_blue{
 	width: 80px;
 	height:80px;
-	background:url('img/coins_blue.png');
-	background-size: cover;	
+	border-radius: 150px;
+	background: #0004d6;
+	box-shadow: inset 8px 8px 16px #000256, 
+	            inset -8px -8px 16px #0006ff;
 }
 .text{
+	margin-bottom: 20px;
 	font-size: 70px;
 	text-align: center;
-	color: #094F18;
 }
 .text_red{
 	color: #ff0000;
 }
 .text_blue{
-	color: #0084ff;
+	color: #0004d6;
 }
 .additionalButton{
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
+	margin-top: 40px;
 }
 .FAQButton{
 	text-align: center;
 	margin: 0 auto;
-	background-color: darkgreen;
+	border-radius: 20px;
+	background: #37a9eb;
+	box-shadow:  7px 7px 14px #2a80b3, 
+	             -7px -7px 14px #44d2ff;
 	width: 49%;
-	box-shadow: 1px 3px 1px rgba(0,0,0,0.5);
 	padding:10px;
 }
 .FAQ{
 	width: 100%;
-	color: #4DEF15;
+	color: #000;
 	font-size: 50px;
 }
 .FAQ:hover{
-	color: #56A63D;
+	color: #0590e1;
+}
+.FAQButton:active{
+	box-shadow: none;
 }
 .resetButton{
 	margin: 0 auto;
-	background-color: darkgreen;
+	border-radius: 20px;
+	background: #37a9eb;
+	box-shadow:  7px 7px 14px #2a80b3, 
+             -7px -7px 14px #44d2ff;
 	width: 49%;
-	box-shadow: 1px 3px 1px rgba(0,0,0,0.5);
 	padding:10px;
 }
 .reset{
 	width: 100%;
-	color: #4DEF15;
+	color: #000;
 	font-size: 50px;
-	background-color: darkgreen;
+	background-color:rgba(0,0,0,0.01);
 }
-@media (max-height: 900px){
+
+.reset:hover{
+	color:#0590e1;
+}
+
+.resetButton:active{
+	box-shadow: none;
+}
+
+@media (max-height: 1000px){
 	.text{
 		font-size: 48px;
 	}
@@ -156,7 +190,7 @@ body{
 		line-height: 1.5;
 	}
 }
-@media(max-height: 715px){
+@media(max-height: 900px){
 	.text{
 		font-size: 40px;
 	}
